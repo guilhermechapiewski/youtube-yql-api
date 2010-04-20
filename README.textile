@@ -1,0 +1,7 @@
+h1. youtube-api
+
+Google App Engine service to be used as the backend for some YQL tables.
+
+h2. http://youtube-api.appspot.com/video/[video_id]
+
+Gets video metadata by its id.
