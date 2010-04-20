@@ -18,7 +18,7 @@ class VideoResource(webapp.RequestHandler):
             pass #will return empty result :)
         
         if video:
-            self.response.out.write(u'<result>')
+            self.response.out.write(u'<results>')
             self.response.out.write(u'   <video>')
             self.response.out.write(u'       <id>%s</id>' % video_id)
             self.response.out.write(u'       <url><![CDATA[%s]]></url>' % video.media.player.url)
@@ -50,9 +50,9 @@ class VideoResource(webapp.RequestHandler):
             self.response.out.write(u'       </files>')
             
             self.response.out.write(u'   </video>')
-            self.response.out.write(u'</result>')
+            self.response.out.write(u'</results>')
         else:
-            self.response.out.write(u'<result />')
+            self.response.out.write(u'<results />')
 
 application = webapp.WSGIApplication(
                                      [('/video.*', VideoResource)],
