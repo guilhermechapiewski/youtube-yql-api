@@ -69,8 +69,8 @@ XML_STRING_ENCODING = 'utf-8'
 # The desired string encoding for object members. set or monkey-patch to
 # unicode if you want object members to be Python unicode strings, instead of
 # encoded strings
-MEMBER_STRING_ENCODING = 'utf-8'
-#MEMBER_STRING_ENCODING = unicode
+#MEMBER_STRING_ENCODING = 'utf-8'
+MEMBER_STRING_ENCODING = unicode
 
 # If True, all methods which are exclusive to v1 will raise a
 # DeprecationWarning
@@ -110,7 +110,7 @@ def CreateClassFromXMLString(target_class, xml_string, string_encoding=None):
         _namespace class variable.
     xml_string: str A string which contains valid XML. The root element
         of the XML string should match the tag and namespace of the desired
-        class.
+        class. 
     string_encoding: str The character encoding which the xml_string should
         be converted to before it is interpreted and translated into
         objects. The default is None in which case the string encoding
