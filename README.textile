@@ -1,6 +1,6 @@
 h1. youtube-api
 
-Google App Engine service to be used as the backend for some YQL tables.
+Google App Engine service to be used as the backend for some YQL tables, available at *http://youtube-api.appspot.com*.
 
 h2. http://youtube-api.appspot.com/video/[video_id]
 

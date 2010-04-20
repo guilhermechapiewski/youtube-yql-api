@@ -8,7 +8,7 @@ class VideoResource(webapp.RequestHandler):
         self.response.headers['Content-Type'] = 'text/xml'
         self.response.out.write('<?xml version="1.0" encoding="UTF-8"?>')
         
-        video_id = self.request.get('video_id', default_value='')
+        video_id = self.request.get('id', default_value='')
         video = None
         try:
             yt = YouTubeService()
@@ -51,10 +51,10 @@ class VideoResource(webapp.RequestHandler):
             self.response.out.write('   </video>')
             self.response.out.write('</result>')
         else:
-            self.response.out.write('<result />')
+            self.response.out.write('<result %s />' % video_id)
 
 application = webapp.WSGIApplication(
-                                     [('/video/.*', VideoResource)],
+                                     [('/video.*', VideoResource)],
                                      debug=True)
 
 def main():
