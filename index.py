@@ -1,6 +1,7 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 
+from gdata.alt.appengine import run_on_appengine
 from gdata.youtube.service import YouTubeService
 
 class VideoResource(webapp.RequestHandler):
@@ -11,7 +12,7 @@ class VideoResource(webapp.RequestHandler):
         video_id = self.request.get('id', default_value='')
         video = None
         try:
-            yt = YouTubeService()
+            yt = run_on_appengine(YouTubeService())
             video = yt.GetYouTubeVideoEntry(video_id=video_id)
         except Exception, e:
             pass #will return empty result :)
