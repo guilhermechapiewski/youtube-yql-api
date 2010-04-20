@@ -2,7 +2,7 @@ h1. youtube-api
 
 Google App Engine service used as the backend for "YouTube YQL tables":http://github.com/yql/yql-tables/tree/master/youtube/
 
-Service available at "http://youtube-api.appspot.com":http://youtube-api.appspot.com.
+h2. How to use it:
 
 h3. http://youtube-api.appspot.com/video?id=[video_id]
 
