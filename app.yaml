@@ -1,5 +1,5 @@
 application: youtube-api
-version: 1
+version: 3
 runtime: python
 api_version: 1
 

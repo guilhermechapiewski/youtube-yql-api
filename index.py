@@ -33,7 +33,7 @@ class VideoResource(webapp.RequestHandler):
             self.response.out.write('       </categories>')
             
             self.response.out.write('       <tags>')
-            if video.media.keywords.text
+            if video.media.keywords.text:
                 for tag in video.media.keywords.text.split(','):
                     self.response.out.write('           <tag><![CDATA[%s]]></tag>' % tag)
             self.response.out.write('       </tags>')
