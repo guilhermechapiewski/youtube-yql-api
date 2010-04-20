@@ -4,8 +4,6 @@ Google App Engine service used as the backend for "YouTube YQL tables":http://gi
 
 h2. How to use it:
 
-h3. http://youtube-api.appspot.com/video?id=[video_id]
-
-Gets Video metadata by its id.
+h3. Get Video metadata by its id
 
 Example: "http://youtube-api.appspot.com/video?id=Lq35LACdErI":http://youtube-api.appspot.com/video?id=Lq35LACdErI
